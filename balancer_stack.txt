@@ -1,0 +1,1155 @@
+2022-05-22 17:21:44
+Full thread dump OpenJDK 64-Bit Server VM (25.275-b01 mixed mode):
+
+"IPC Client (776700275) connection to localhost/127.0.0.1:9000 from tonypan" #85 daemon prio=5 os_prio=0 tid=0x000055a29296e800 nid=0x373d in Object.wait() [0x00007fe82b711000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000071c9b5ce0> (a org.apache.hadoop.ipc.Client$Connection)
+	at org.apache.hadoop.ipc.Client$Connection.waitForWork(Client.java:1007)
+	- locked <0x000000071c9b5ce0> (a org.apache.hadoop.ipc.Client$Connection)
+	at org.apache.hadoop.ipc.Client$Connection.run(Client.java:1051)
+
+"Attach Listener" #83 daemon prio=9 os_prio=0 tid=0x00007fe8442ff000 nid=0x3707 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"pool-6-thread-50" #81 prio=5 os_prio=0 tid=0x00007fe85d37c800 nid=0x35fc runnable [0x00007fe827bda000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000722712c38> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-49" #80 prio=5 os_prio=0 tid=0x00007fe85d37a800 nid=0x35fa runnable [0x00007fe827cdb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000722497aa0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-48" #79 prio=5 os_prio=0 tid=0x00007fe85d4c2800 nid=0x35f5 runnable [0x00007fe827ddc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000072235a350> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-47" #78 prio=5 os_prio=0 tid=0x00007fe85d4c1000 nid=0x35f4 runnable [0x00007fe827edd000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000072221dcc0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-46" #77 prio=5 os_prio=0 tid=0x00007fe85d4be800 nid=0x35f1 runnable [0x00007fe827fde000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007220df4b0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-45" #76 prio=5 os_prio=0 tid=0x00007fe85d4b3800 nid=0x35ea runnable [0x00007fe8280df000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000721fa1d60> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-44" #75 prio=5 os_prio=0 tid=0x00007fe85d4b1800 nid=0x35e8 runnable [0x00007fe8281e0000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000721d26e28> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-43" #74 prio=5 os_prio=0 tid=0x00007fe85d3af000 nid=0x35e6 runnable [0x00007fe8282e1000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000721be96d8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-42" #73 prio=5 os_prio=0 tid=0x00007fe85d3ad800 nid=0x35e5 runnable [0x00007fe8283e2000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000721aabf88> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-41" #72 prio=5 os_prio=0 tid=0x00007fe85d3ab800 nid=0x35e4 runnable [0x00007fe8284e3000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000072196e838> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-40" #71 prio=5 os_prio=0 tid=0x00007fe85d3a9000 nid=0x35e3 runnable [0x00007fe8285e4000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000721877bc8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-39" #70 prio=5 os_prio=0 tid=0x00007fe85d3a7000 nid=0x35e2 runnable [0x00007fe8286e5000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007216f3998> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-38" #69 prio=5 os_prio=0 tid=0x00007fe85d3a5000 nid=0x35e0 runnable [0x00007fe8287e6000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007215b6248> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-37" #68 prio=5 os_prio=0 tid=0x00007fe85d36f800 nid=0x35de runnable [0x00007fe828ae7000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000721478af8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-36" #67 prio=5 os_prio=0 tid=0x00007fe85d36d800 nid=0x35dd runnable [0x00007fe828be8000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000072133ba40> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-35" #66 prio=5 os_prio=0 tid=0x00007fe85d36c000 nid=0x35dc runnable [0x00007fe828ce9000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007210c0aa8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-34" #65 prio=5 os_prio=0 tid=0x00007fe85d369000 nid=0x35db runnable [0x00007fe828dea000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000720fc9e00> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-33" #64 prio=5 os_prio=0 tid=0x00007fe85d367800 nid=0x35da runnable [0x00007fe828eeb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000720e45b48> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-32" #63 prio=5 os_prio=0 tid=0x00007fe85d364000 nid=0x35d9 runnable [0x00007fe828fec000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000720d08560> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-31" #62 prio=5 os_prio=0 tid=0x00007fe85d362000 nid=0x35d8 runnable [0x00007fe8290ed000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000720a2e4e8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-30" #61 prio=5 os_prio=0 tid=0x00007fe85d360800 nid=0x35d7 runnable [0x00007fe8291ee000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007208f0d88> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-29" #60 prio=5 os_prio=0 tid=0x00007fe85d35e800 nid=0x35d6 runnable [0x00007fe8292ef000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007207b3780> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-28" #59 prio=5 os_prio=0 tid=0x00007fe85d351800 nid=0x35d5 runnable [0x00007fe8293f0000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007206770f0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-27" #58 prio=5 os_prio=0 tid=0x00007fe85d350000 nid=0x35d4 runnable [0x00007fe8294f1000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007205388c8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-26" #57 prio=5 os_prio=0 tid=0x00007fe85d34e000 nid=0x35d3 runnable [0x00007fe8295f2000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000072041f088> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-25" #56 prio=5 os_prio=0 tid=0x00007fe85d34c000 nid=0x35d2 runnable [0x00007fe8296f3000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007202bd870> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-24" #55 prio=5 os_prio=0 tid=0x00007fe85d35b800 nid=0x35d1 runnable [0x00007fe8297f4000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x0000000720180120> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-23" #54 prio=5 os_prio=0 tid=0x00007fe85d359800 nid=0x35d0 runnable [0x00007fe8298f5000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000007200895e8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-22" #53 prio=5 os_prio=0 tid=0x00007fe85d358000 nid=0x35cf runnable [0x00007fe8299f6000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071ff3f270> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-21" #52 prio=5 os_prio=0 tid=0x00007fe85d356000 nid=0x35ce runnable [0x00007fe829af7000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071fdc7bf8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-20" #51 prio=5 os_prio=0 tid=0x00007fe85d354000 nid=0x35cd runnable [0x00007fe829bf8000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071fc8a468> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-19" #50 prio=5 os_prio=0 tid=0x00007fe85d352800 nid=0x35cc runnable [0x00007fe829cf9000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071fb4cd18> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-18" #49 prio=5 os_prio=0 tid=0x00007fe85d348800 nid=0x35cb runnable [0x00007fe829dfa000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071fa0f640> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-17" #48 prio=5 os_prio=0 tid=0x00007fe85d346800 nid=0x35ca runnable [0x00007fe829efb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f8d2f60> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-16" #47 prio=5 os_prio=0 tid=0x00007fe85d344800 nid=0x35c9 runnable [0x00007fe829ffc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f7946e0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-15" #46 prio=5 os_prio=0 tid=0x00007fe85d343000 nid=0x35c8 runnable [0x00007fe82a0fd000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f6572c0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-14" #45 prio=5 os_prio=0 tid=0x00007fe85d341000 nid=0x35c7 runnable [0x00007fe82a1fe000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f560308> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-13" #44 prio=5 os_prio=0 tid=0x00007fe85d33f000 nid=0x35c6 runnable [0x00007fe82a2ff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f3dc0b0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-12" #43 prio=5 os_prio=0 tid=0x00007fe85d33d000 nid=0x35c5 runnable [0x00007fe82a400000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f29e9e0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-11" #42 prio=5 os_prio=0 tid=0x00007fe85d33b800 nid=0x35c4 runnable [0x00007fe82a501000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f1613d8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-10" #41 prio=5 os_prio=0 tid=0x00007fe85d339800 nid=0x35c3 runnable [0x00007fe82a602000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071f023d20> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-9" #40 prio=5 os_prio=0 tid=0x00007fe85d338000 nid=0x35c2 runnable [0x00007fe82a703000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071ef8b448> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-8" #39 prio=5 os_prio=0 tid=0x00007fe85d335800 nid=0x35c1 runnable [0x00007fe82a804000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071eda8ca0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-7" #38 prio=5 os_prio=0 tid=0x00007fe85d334000 nid=0x35c0 runnable [0x00007fe82a905000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071ec6b5c8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-6" #37 prio=5 os_prio=0 tid=0x00007fe85d332000 nid=0x35bf runnable [0x00007fe82aa06000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071eb2df08> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-5" #36 prio=5 os_prio=0 tid=0x00007fe85d330800 nid=0x35be runnable [0x00007fe82ab07000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071e9f0888> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-4" #35 prio=5 os_prio=0 tid=0x00007fe85d32e000 nid=0x35bd runnable [0x00007fe82ac08000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071e8b30a8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-3" #34 prio=5 os_prio=0 tid=0x00007fe85d32c800 nid=0x35bc runnable [0x00007fe82ad09000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071e77c288> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-2" #33 prio=5 os_prio=0 tid=0x00007fe85d32a800 nid=0x35bb runnable [0x00007fe82ae0a000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071e6380c0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-6-thread-1" #32 prio=5 os_prio=0 tid=0x00007fe85d329800 nid=0x35ba runnable [0x00007fe82af0b000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x000000071e4fb3f0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.receiveResponse(Dispatcher.java:430)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.dispatch(Dispatcher.java:370)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$PendingMove.access$2900(Dispatcher.java:219)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher$1.run(Dispatcher.java:1116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-5-thread-2" #31 prio=5 os_prio=0 tid=0x00007fe85d31d000 nid=0x35b9 waiting on condition [0x00007fe82b00c000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000071c6c1950> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-5-thread-1" #30 prio=5 os_prio=0 tid=0x00007fe85d31b800 nid=0x35b8 waiting on condition [0x00007fe82b10d000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000071c6c1950> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"ResponseProcessor for block BP-965405983-10.0.0.215-1653254231126:blk_1073746625_5801" #29 daemon prio=5 os_prio=0 tid=0x00007fe85d30c800 nid=0x35b7 runnable [0x00007fe82b20e000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x000000071b00e758> (a sun.nio.ch.Util$3)
+	- locked <0x000000071b00e6d0> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000071b00e308> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at org.apache.hadoop.net.SocketIOWithTimeout$SelectorPool.select(SocketIOWithTimeout.java:335)
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:157)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:161)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:131)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:118)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:409)
+	at org.apache.hadoop.hdfs.protocol.datatransfer.PipelineAck.readFields(PipelineAck.java:213)
+	at org.apache.hadoop.hdfs.DataStreamer$ResponseProcessor.run(DataStreamer.java:1048)
+
+"LeaseRenewer:tonypan@localhost:9000" #28 daemon prio=5 os_prio=0 tid=0x00007fe85d2ca000 nid=0x35b4 waiting on condition [0x00007fe82b30f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.hadoop.hdfs.client.impl.LeaseRenewer.run(LeaseRenewer.java:437)
+	at org.apache.hadoop.hdfs.client.impl.LeaseRenewer.access$700(LeaseRenewer.java:76)
+	at org.apache.hadoop.hdfs.client.impl.LeaseRenewer$1.run(LeaseRenewer.java:310)
+	at java.lang.Thread.run(Thread.java:748)
+
+"DataStreamer for file /system/balancer.id block BP-965405983-10.0.0.215-1653254231126:blk_1073746625_5801" #27 daemon prio=5 os_prio=0 tid=0x00007fe85d2c2000 nid=0x35b3 in Object.wait() [0x00007fe82b410000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000071c514718> (a java.util.LinkedList)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:650)
+	- locked <0x000000071c514718> (a java.util.LinkedList)
+
+"IPC Parameter Sending Thread #0" #25 daemon prio=5 os_prio=0 tid=0x00007fe85c5ba800 nid=0x35b1 waiting on condition [0x00007fe82b812000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000005d0551260> (a java.util.concurrent.SynchronousQueue$TransferStack)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"org.apache.hadoop.fs.FileSystem$Statistics$StatisticsDataReferenceCleaner" #21 daemon prio=5 os_prio=0 tid=0x00007fe85d1f5000 nid=0x35af in Object.wait() [0x00007fe8402b0000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000005d042e4c0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000005d042e4c0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at org.apache.hadoop.fs.FileSystem$Statistics$StatisticsDataReferenceCleaner.run(FileSystem.java:3698)
+	at java.lang.Thread.run(Thread.java:748)
+
+"Service Thread" #17 daemon prio=9 os_prio=0 tid=0x00007fe85c125800 nid=0x35aa runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread11" #16 daemon prio=9 os_prio=0 tid=0x00007fe85c121800 nid=0x35a9 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread10" #15 daemon prio=9 os_prio=0 tid=0x00007fe85c11f000 nid=0x35a8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread9" #14 daemon prio=9 os_prio=0 tid=0x00007fe85c114000 nid=0x35a7 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread8" #13 daemon prio=9 os_prio=0 tid=0x00007fe85c109800 nid=0x35a6 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread7" #12 daemon prio=9 os_prio=0 tid=0x00007fe85c108000 nid=0x35a5 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread6" #11 daemon prio=9 os_prio=0 tid=0x00007fe85c106000 nid=0x35a4 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread5" #10 daemon prio=9 os_prio=0 tid=0x00007fe85c0fb800 nid=0x35a3 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread4" #9 daemon prio=9 os_prio=0 tid=0x00007fe85c0f9800 nid=0x35a2 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread3" #8 daemon prio=9 os_prio=0 tid=0x00007fe85c0e7000 nid=0x35a1 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #7 daemon prio=9 os_prio=0 tid=0x00007fe85c0e4800 nid=0x35a0 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #6 daemon prio=9 os_prio=0 tid=0x00007fe85c0e2800 nid=0x359f waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=0 tid=0x00007fe85c0df000 nid=0x359e waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 tid=0x00007fe85c0d9800 nid=0x359d runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=0 tid=0x00007fe85c0ab800 nid=0x359c in Object.wait() [0x00007fe841eb5000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000005d0419948> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000005d0419948> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 tid=0x00007fe85c0a7000 nid=0x359b in Object.wait() [0x00007fe841fb6000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000005d0438628> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000005d0438628> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=0 tid=0x00007fe85c017800 nid=0x358a waiting on condition [0x00007fe864299000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher.waitForMoveCompletion(Dispatcher.java:1184)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher.dispatchBlockMoves(Dispatcher.java:1158)
+	at org.apache.hadoop.hdfs.server.balancer.Dispatcher.dispatchAndCheckContinue(Dispatcher.java:1122)
+	at org.apache.hadoop.hdfs.server.balancer.Balancer.runOneIteration(Balancer.java:645)
+	at org.apache.hadoop.hdfs.server.balancer.Balancer.run(Balancer.java:702)
+	at org.apache.hadoop.hdfs.server.balancer.Balancer$Cli.run(Balancer.java:781)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:76)
+	at org.apache.hadoop.hdfs.server.balancer.Balancer.main(Balancer.java:924)
+
+"VM Thread" os_prio=0 tid=0x00007fe85c09d000 nid=0x359a runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00007fe85c02d800 nid=0x358b runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x00007fe85c02f000 nid=0x358c runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00007fe85c031000 nid=0x358d runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00007fe85c032800 nid=0x358e runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=0 tid=0x00007fe85c034800 nid=0x358f runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=0 tid=0x00007fe85c036000 nid=0x3590 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=0 tid=0x00007fe85c038000 nid=0x3591 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=0 tid=0x00007fe85c039800 nid=0x3592 runnable 
+
+"GC task thread#8 (ParallelGC)" os_prio=0 tid=0x00007fe85c03b800 nid=0x3593 runnable 
+
+"GC task thread#9 (ParallelGC)" os_prio=0 tid=0x00007fe85c03d000 nid=0x3594 runnable 
+
+"GC task thread#10 (ParallelGC)" os_prio=0 tid=0x00007fe85c03f000 nid=0x3595 runnable 
+
+"GC task thread#11 (ParallelGC)" os_prio=0 tid=0x00007fe85c041000 nid=0x3596 runnable 
+
+"GC task thread#12 (ParallelGC)" os_prio=0 tid=0x00007fe85c042800 nid=0x3597 runnable 
+
+"GC task thread#13 (ParallelGC)" os_prio=0 tid=0x00007fe85c044800 nid=0x3598 runnable 
+
+"GC task thread#14 (ParallelGC)" os_prio=0 tid=0x00007fe85c046000 nid=0x3599 runnable 
+
+"VM Periodic Task Thread" os_prio=0 tid=0x00007fe85c128800 nid=0x35ab waiting on condition 
+
+JNI global references: 238
+
