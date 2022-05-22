@@ -1,0 +1,16 @@
+Formatting using clusterid: CID-666be702-aba8-4c2a-9a55-828f709e49cb
+NameNodeBenchmark.0.3
+Inputs: 
+   operation: createWrite
+   baseDir: /benchmarks
+   startTime: 0
+   numFiles: 30
+   replicationFactorPerFile: 1
+   blocksPerFile: 160
+   bytesPerBlock: 10485760
+   bytesPerChecksum: 512
+Job started: 0
+Job ended: Sun May 22 17:07:51 EDT 2022
+The createWrite job took 170 seconds.
+The job recorded 0 exceptions.
+Time Stamp               Iteration#  Bytes Already Moved  Bytes Left To Move  Bytes Being Moved

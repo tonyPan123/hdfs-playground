@@ -7,7 +7,7 @@ httpsBase=29865
 addrBase=17866
 ipcBase=27867
 
-for i in 1 2 3 4; do
+for i in 1 2 3 4 5; do
   rm -rf $workspace/conf-$i $workspace/store-$i $workspace/logs-$i
   mkdir -p $workspace/conf-$i
   mkdir -p $workspace/store-$i
